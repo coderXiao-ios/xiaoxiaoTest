@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="Trv-gg-FoP" customClass="ExpressionView">
+            <rect key="frame" x="0.0" y="0.0" width="60" height="77"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1mv-Xa-S5C">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="77"/>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ico_dazhaohui.png" translatesAutoresizingMaskIntoConstraints="NO" id="Wfq-9x-B6I">
+                    <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="Wfq-9x-B6I" secondAttribute="height" multiplier="1:1" id="sqe-wG-kgu"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="打招呼" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gOI-rq-Uk5">
+                    <rect key="frame" x="0.0" y="65" width="60" height="12"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="gOI-rq-Uk5" secondAttribute="trailing" id="1bt-6V-3Cz"/>
+                <constraint firstItem="Wfq-9x-B6I" firstAttribute="leading" secondItem="Trv-gg-FoP" secondAttribute="leading" id="8u3-QL-k7w"/>
+                <constraint firstAttribute="trailing" secondItem="Wfq-9x-B6I" secondAttribute="trailing" id="C49-Vz-UIc"/>
+                <constraint firstAttribute="bottom" secondItem="1mv-Xa-S5C" secondAttribute="bottom" id="Les-IV-RPG"/>
+                <constraint firstItem="Wfq-9x-B6I" firstAttribute="top" secondItem="Trv-gg-FoP" secondAttribute="top" id="Pfr-WC-2pP"/>
+                <constraint firstItem="1mv-Xa-S5C" firstAttribute="leading" secondItem="Trv-gg-FoP" secondAttribute="leading" id="XnL-3G-krP"/>
+                <constraint firstItem="gOI-rq-Uk5" firstAttribute="leading" secondItem="Trv-gg-FoP" secondAttribute="leading" id="Zd5-Fn-m4P"/>
+                <constraint firstItem="1mv-Xa-S5C" firstAttribute="top" secondItem="Trv-gg-FoP" secondAttribute="top" id="cl8-gy-W7N"/>
+                <constraint firstItem="gOI-rq-Uk5" firstAttribute="top" secondItem="Wfq-9x-B6I" secondAttribute="bottom" constant="5" id="eLL-NR-V3h"/>
+                <constraint firstAttribute="trailing" secondItem="1mv-Xa-S5C" secondAttribute="trailing" id="hkv-rd-g3E"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="clickBtn" destination="1mv-Xa-S5C" id="hjC-gL-TLI"/>
+                <outlet property="expressionImageView" destination="Wfq-9x-B6I" id="WqQ-lg-X1j"/>
+                <outlet property="titleLabel" destination="gOI-rq-Uk5" id="8NZ-IH-oDh"/>
+            </connections>
+            <point key="canvasLocation" x="87" y="212.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ico_dazhaohui.png" width="40" height="40"/>
+    </resources>
+</document>

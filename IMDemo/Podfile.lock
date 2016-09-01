@@ -1,0 +1,50 @@
+PODS:
+  - CocoaLumberjack (2.0.3):
+    - CocoaLumberjack/Default (= 2.0.3)
+    - CocoaLumberjack/Extensions (= 2.0.3)
+  - CocoaLumberjack/Core (2.0.3)
+  - CocoaLumberjack/Default (2.0.3):
+    - CocoaLumberjack/Core
+  - CocoaLumberjack/Extensions (2.0.3):
+    - CocoaLumberjack/Default
+  - FMDB (2.6.2):
+    - FMDB/standard (= 2.6.2)
+  - FMDB/standard (2.6.2)
+  - M80AttributedLabel (1.3.3)
+  - NIMSDK (2.6.0)
+  - Reachability (3.1.1)
+  - SDWebImage (3.7.6):
+    - SDWebImage/Core (= 3.7.6)
+  - SDWebImage/Core (3.7.6)
+  - SSZipArchive (1.4)
+  - SVProgressHUD (1.1.3)
+  - Toast (2.4)
+  - TYAttributedLabel (2.6.1)
+
+DEPENDENCIES:
+  - CocoaLumberjack (~> 2.0.0-rc2)
+  - FMDB (~> 2.5)
+  - M80AttributedLabel (~> 1.3.1)
+  - NIMSDK
+  - Reachability (~> 3.1.1)
+  - SDWebImage (~> 3.7.1)
+  - SSZipArchive (~> 1.2)
+  - SVProgressHUD (~> 1.1.2)
+  - Toast (~> 2.4)
+  - TYAttributedLabel
+
+SPEC CHECKSUMS:
+  CocoaLumberjack: f58d8a19629f4d8379ae14bb3534def24161430e
+  FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  M80AttributedLabel: 3bcacb2d85e6c66e32fb930aac2f04eca3974106
+  NIMSDK: a8b27a705be59bca569cf668fc91154da136a872
+  Reachability: dd9aa4fb6667b9f787690a74f53cb7634ce99893
+  SDWebImage: c325cf02c30337336b95beff20a13df489ec0ec9
+  SSZipArchive: bab21000ee11b7ba68d5880bcd87d80e4eb93e65
+  SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
+  Toast: 0773b8fc0e97352ca6054517bec7ebdd4110029d
+  TYAttributedLabel: 4785820dc8d7935446f49f1de4daa0f99ebcba8a
+
+PODFILE CHECKSUM: b07632ae9668fe627e5aee7f8eaf9c6657c10ae7
+
+COCOAPODS: 1.0.1
