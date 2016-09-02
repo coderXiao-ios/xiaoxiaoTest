@@ -15,7 +15,6 @@
 @property (nonatomic,copy) NSString *content;//消息主体
 @property (nonatomic,copy) NSString *gcount;//礼物个数
 @property (nonatomic,copy) NSString *giftInfo;//礼物类型
-@property (nonatomic,copy) NSString *superGiftInfo;//礼物类型
 @property (nonatomic,copy) NSString *avator;//用户头像
 
 @end

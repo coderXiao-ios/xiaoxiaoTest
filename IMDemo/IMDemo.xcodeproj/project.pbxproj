@@ -29,6 +29,7 @@
 		00BD05351D65944F003509E3 /* NSString+NTES.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BD05341D65944F003509E3 /* NSString+NTES.m */; };
 		00BE39A11D75826F00406D5E /* HFMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE39A01D75826F00406D5E /* HFMessageModel.m */; };
 		00BE39A31D7582B200406D5E /* HFMessageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE39A21D7582B200406D5E /* HFMessageConfig.m */; };
+		00C1FBDF1D7977BE009BBEE9 /* MessageTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C1FBDE1D7977BE009BBEE9 /* MessageTipView.m */; };
 		00CA19161D744DD10076B3B6 /* keyboard_a.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00CA18E71D744DD10076B3B6 /* keyboard_a.txt */; };
 		00CA19171D744DD10076B3B6 /* keyboard_a_00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CA18E81D744DD10076B3B6 /* keyboard_a_00@2x.png */; };
 		00CA19181D744DD10076B3B6 /* keyboard_a_00@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CA18E91D744DD10076B3B6 /* keyboard_a_00@3x.png */; };
@@ -299,6 +300,8 @@
 		00BE399F1D75826F00406D5E /* HFMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFMessageModel.h; sourceTree = "<group>"; };
 		00BE39A01D75826F00406D5E /* HFMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFMessageModel.m; sourceTree = "<group>"; };
 		00BE39A21D7582B200406D5E /* HFMessageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFMessageConfig.m; sourceTree = "<group>"; };
+		00C1FBDD1D7977BE009BBEE9 /* MessageTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTipView.h; sourceTree = "<group>"; };
+		00C1FBDE1D7977BE009BBEE9 /* MessageTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTipView.m; sourceTree = "<group>"; };
 		00CA18E71D744DD10076B3B6 /* keyboard_a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keyboard_a.txt; sourceTree = "<group>"; };
 		00CA18E81D744DD10076B3B6 /* keyboard_a_00@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_a_00@2x.png"; sourceTree = "<group>"; };
 		00CA18E91D744DD10076B3B6 /* keyboard_a_00@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "keyboard_a_00@3x.png"; sourceTree = "<group>"; };
@@ -786,6 +789,8 @@
 			children = (
 				00BD051E1D658DA4003509E3 /* XXChatRoomVC.h */,
 				00BD051F1D658DA4003509E3 /* XXChatRoomVC.m */,
+				00C1FBDD1D7977BE009BBEE9 /* MessageTipView.h */,
+				00C1FBDE1D7977BE009BBEE9 /* MessageTipView.m */,
 				002035AF1D6B996100E36288 /* HFChatTableView.h */,
 				002035B01D6B996100E36288 /* HFChatTableView.m */,
 				00A7156F1D6F01A500F335C6 /* CustomMessageView.h */,
@@ -1856,6 +1861,7 @@
 				00E253C91D649038000D138A /* NIMTeamAnnouncementListCell.m in Sources */,
 				00D00F5D1D6DA510003787C1 /* RegexKitLite.m in Sources */,
 				00E2538C1D649038000D138A /* NIMContactSelectTabView.m in Sources */,
+				00C1FBDF1D7977BE009BBEE9 /* MessageTipView.m in Sources */,
 				00CA19A11D7538FD0076B3B6 /* ExpressionModel.m in Sources */,
 				00E253C01D649038000D138A /* NIMTeamInfoData.m in Sources */,
 				00A715681D6EE9BB00F335C6 /* HFAttchment.m in Sources */,
@@ -2006,7 +2012,7 @@
 			baseConfigurationReference = 657DECBEF1C3C413EFA83424 /* Pods-IMDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sun Ning (LRT36TVS92)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IMDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2018,9 +2024,9 @@
 					"$(PROJECT_DIR)/NIMKit/Vendors/NIMSDK",
 					"$(PROJECT_DIR)/NIMKit/Vendors/NIMSDK/Libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.createsaga.zhibo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.greatgate.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9eae87d9-c951-4a9b-8fe7-ab2575e8c5cc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -2029,7 +2035,7 @@
 			baseConfigurationReference = 66F84A7DFD62E2DC5FA1D056 /* Pods-IMDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Sun Ning (LRT36TVS92)";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = IMDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -2041,9 +2047,9 @@
 					"$(PROJECT_DIR)/NIMKit/Vendors/NIMSDK",
 					"$(PROJECT_DIR)/NIMKit/Vendors/NIMSDK/Libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.createsaga.zhibo;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.greatgate.-";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "9eae87d9-c951-4a9b-8fe7-ab2575e8c5cc";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

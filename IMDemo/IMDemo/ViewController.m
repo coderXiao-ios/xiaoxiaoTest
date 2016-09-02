@@ -60,6 +60,7 @@
     NSLog(@"_____***HFUUID:%@",[[NSUserDefaults standardUserDefaults] objectForKey:@"HFUUID"]);
     NSString *uuid = [[NSUserDefaults standardUserDefaults] objectForKey:@"HFUUID"] ;
     NSLog(@"uuid:%@ 长度：%ld",uuid,(unsigned long)uuid.length);
+    [self btntest];
 }
 - (void) entyAction{
     [[NIMSDK sharedSDK].loginManager login:NIMMyAccount2 token:NIMMyToken2 completion:^(NSError * _Nullable error) {
@@ -77,10 +78,10 @@
                     [[HFChatRoomMannager sharedInstance] cacheMyInfo:me roomId:chatroom.roomId];
                     NSLog(@"ext:%@\nannouncement:%@",chatroom.ext,chatroom.announcement);
                     XXChatRoomVC *vc = [[XXChatRoomVC alloc] initWithChatroom:chatroom];
-                    [self presentViewController:vc animated:YES completion:^{
-                        
-                    }];
-//                    [self.navigationController pushViewController:vc animated:YES];
+//                    [self presentViewController:vc animated:YES completion:^{
+//                        
+//                    }];
+                    [self.navigationController pushViewController:vc animated:YES];
                 }else{
                     NSLog(@"进入聊天室失败！");
                 }
@@ -91,6 +92,23 @@
             NSLog(@"登录失败！") ;
         }
     }];
+}
+#pragma mark btn
+- (void) btntest{
+    NSString *str = @"400000条新留言" ;
+    UIImage *img = [UIImage imageNamed:@"icon_genduoliuyan_normal"];
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setImage:img forState:UIControlStateNormal];
+    [btn setTitle:str forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:13] ;
+    NSDictionary *attrs = @{NSFontAttributeName : [UIFont systemFontOfSize:13]};
+    CGSize textSize = [str boundingRectWithSize:self.view.frame.size options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
+    btn.frame = CGRectMake(100, 400, textSize.width + img.size.width + 15, 20);
+    [self.view addSubview:btn];
+    btn.backgroundColor = [UIColor lightGrayColor];
+    btn.alpha = 0.3 ;
+    btn.titleEdgeInsets = UIEdgeInsetsMake(0, -img.size.width - 10, 0, 0);
+    btn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -textSize.width - 10 - img.size.width - 60);
 }
 #pragma mark 生成UUID
 - (void)keep_UUID

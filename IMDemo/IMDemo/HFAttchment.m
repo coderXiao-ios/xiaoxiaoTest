@@ -9,7 +9,6 @@
 #import "HFAttchment.h"
 @implementation HFAttchment
 @synthesize giftInfo = _giftInfo;
-@synthesize superGiftInfo = _superGiftInfo;
 @synthesize type = _type;
 @synthesize name = _name;
 @synthesize content = _content;

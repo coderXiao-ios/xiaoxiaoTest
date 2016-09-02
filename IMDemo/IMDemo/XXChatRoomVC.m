@@ -39,6 +39,7 @@
 @property (nonatomic, assign)NSInteger lastMsgCount;
 @property (nonatomic, strong)CustomMessageView *customeView ;
 @property (nonatomic,strong) NSMutableDictionary *myInfo;
+@property (nonatomic,strong) UIView *bgView;
 @end
 
 @implementation XXChatRoomVC
@@ -69,37 +70,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.backgroundColor = [UIColor whiteColor];
-    FloatKeyBoardView *keyView = [[FloatKeyBoardView alloc] initWithFrame:CGRectMake(0, kWinSize.height, kWinSize.width, 40)];
-    keyView.delegate = self;
-    [self.view addSubview:keyView];
-    self.keyView = keyView;
-    
-    _chatTableView = [[HFChatTableView alloc] initWithFrame:CGRectMake(10, 100, 200, 200) style:UITableViewStylePlain];
-    [self.view addSubview:_chatTableView];
-    _chatTableView.hfDelegate = self ;
-    
-    UIButton *inputBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    inputBtn.frame = CGRectMake(200, 100, 50, 30);
-    [inputBtn setTitle:@"输入" forState:UIControlStateNormal];
-    [inputBtn addTarget:self action:@selector(intputAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:inputBtn];
-   
-    UIButton *textBtn = [UIButton buttonWithType:UIButtonTypeSystem];
-    textBtn.frame = CGRectMake(250, 150, 120, 30);
-    [textBtn setTitle:@"自定义消息" forState:UIControlStateNormal];
-    [textBtn addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:textBtn];
-    
-    _m_newMsgTipBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    _m_newMsgTipBtn.frame =  CGRectMake(10, 300, 200, 30);
-    _m_newMsgTipBtn.backgroundColor = [UIColor yellowColor];
-    _m_newMsgTipBtn.titleLabel.font = [UIFont systemFontOfSize:11];
-    [_m_newMsgTipBtn setTitle:@"" forState:UIControlStateNormal];
-    [_m_newMsgTipBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [_m_newMsgTipBtn addTarget:self action:@selector(tapTipAction) forControlEvents:UIControlEventTouchUpInside];
-    [self.view addSubview:_m_newMsgTipBtn];
-    [_m_newMsgTipBtn setHidden:YES];
-    _hiddenTipLb = YES ;
+       _hiddenTipLb = YES ;
 
     [HFChatRoomMannager sharedInstance].chatManngerDg = self;
     [HFChatRoomMannager sharedInstance].chatMemberManngerDg = self;
@@ -116,6 +87,42 @@
         HFMessageConfig *config = [[HFMessageConfig alloc] init];
         [[NSUserDefaults standardUserDefaults] setObject:[config creatCustomeExpressions] forKey:@"HFExpressionDic"];
     }
+    [self configView];
+}
+- (void) configView{
+    _bgView = [[UIView alloc] initWithFrame:self.view.bounds];
+    _bgView.backgroundColor = [UIColor grayColor];
+    FloatKeyBoardView *keyView = [[FloatKeyBoardView alloc] initWithFrame:CGRectMake(0, kWinSize.height, kWinSize.width, 40)];
+    keyView.delegate = self;
+    [self.view addSubview:keyView];
+    self.keyView = keyView;
+    
+    _chatTableView = [[HFChatTableView alloc] initWithFrame:CGRectMake(10, 100, 200, 200) style:UITableViewStylePlain];
+    [self.view addSubview:_chatTableView];
+    _chatTableView.hfDelegate = self ;
+    
+    UIButton *inputBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    inputBtn.frame = CGRectMake(200, 100, 50, 30);
+    [inputBtn setTitle:@"输入" forState:UIControlStateNormal];
+    [inputBtn addTarget:self action:@selector(intputAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:inputBtn];
+    
+    UIButton *textBtn = [UIButton buttonWithType:UIButtonTypeSystem];
+    textBtn.frame = CGRectMake(250, 150, 120, 30);
+    [textBtn setTitle:@"自定义消息" forState:UIControlStateNormal];
+    [textBtn addTarget:self action:@selector(testAction) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:textBtn];
+    
+    _m_newMsgTipBtn = [UIButton  buttonWithType:UIButtonTypeCustom];
+    _m_newMsgTipBtn.frame =  CGRectMake(10, 300, 200, 30);
+    _m_newMsgTipBtn.backgroundColor = [UIColor yellowColor];
+    _m_newMsgTipBtn.titleLabel.font = [UIFont systemFontOfSize:11];
+    [_m_newMsgTipBtn setTitle:@"" forState:UIControlStateNormal];
+    [_m_newMsgTipBtn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [_m_newMsgTipBtn addTarget:self action:@selector(tapTipAction) forControlEvents:UIControlEventTouchUpInside];
+    [_m_newMsgTipBtn setHidden:YES];
+    [self.view addSubview:_m_newMsgTipBtn];
+    
 }
 #pragma mark FloatKeyBoardViewDelegate
 - (void)FloatKeyBoardViewTextView:(UITextView *)textView InputSting:(NSString *)inputSting didIsBarrage:(BOOL)isBarrage{
