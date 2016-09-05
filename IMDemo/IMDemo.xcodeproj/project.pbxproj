@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		002035B11D6B996100E36288 /* HFChatTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 002035B01D6B996100E36288 /* HFChatTableView.m */; };
 		002036691D6BE82500E36288 /* HFChatRoomMannager.m in Sources */ = {isa = PBXBuildFile; fileRef = 002036641D6BE82500E36288 /* HFChatRoomMannager.m */; };
+		005246C21D7D0D18009362A6 /* UIButton+HFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 005246C11D7D0D18009362A6 /* UIButton+HFAdd.m */; };
+		005246C51D7D11A7009362A6 /* HFIMUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 005246C41D7D11A7009362A6 /* HFIMUserInfo.m */; };
+		005246C81D7D2DBC009362A6 /* HFExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 005246C71D7D2DBC009362A6 /* HFExtensionHelper.m */; };
 		00A715641D6EA03E00F335C6 /* Star 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A715621D6EA03E00F335C6 /* Star 1@2x.png */; };
 		00A715651D6EA03E00F335C6 /* Star 1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A715631D6EA03E00F335C6 /* Star 1@3x.png */; };
 		00A715681D6EE9BB00F335C6 /* HFAttchment.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A715671D6EE9BB00F335C6 /* HFAttchment.m */; };
@@ -264,6 +267,12 @@
 		002036621D6BE82500E36288 /* xx_ConfigHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = xx_ConfigHeader.h; sourceTree = "<group>"; };
 		002036631D6BE82500E36288 /* HFChatRoomMannager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFChatRoomMannager.h; sourceTree = "<group>"; };
 		002036641D6BE82500E36288 /* HFChatRoomMannager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFChatRoomMannager.m; sourceTree = "<group>"; };
+		005246C01D7D0D18009362A6 /* UIButton+HFAdd.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+HFAdd.h"; sourceTree = "<group>"; };
+		005246C11D7D0D18009362A6 /* UIButton+HFAdd.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+HFAdd.m"; sourceTree = "<group>"; };
+		005246C31D7D11A7009362A6 /* HFIMUserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFIMUserInfo.h; sourceTree = "<group>"; };
+		005246C41D7D11A7009362A6 /* HFIMUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFIMUserInfo.m; sourceTree = "<group>"; };
+		005246C61D7D2DBC009362A6 /* HFExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFExtensionHelper.h; sourceTree = "<group>"; };
+		005246C71D7D2DBC009362A6 /* HFExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFExtensionHelper.m; sourceTree = "<group>"; };
 		00A715621D6EA03E00F335C6 /* Star 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star 1@2x.png"; path = "../../../Desktop/法拉利资料/Star 1@2x.png"; sourceTree = "<group>"; };
 		00A715631D6EA03E00F335C6 /* Star 1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star 1@3x.png"; path = "../../../Desktop/法拉利资料/Star 1@3x.png"; sourceTree = "<group>"; };
 		00A715661D6EE9BB00F335C6 /* HFAttchment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFAttchment.h; sourceTree = "<group>"; };
@@ -777,6 +786,8 @@
 				00D00F5C1D6DA510003787C1 /* RegexKitLite.m */,
 				00DC21381D781B3C007B41BE /* GGKeychain.h */,
 				00DC21391D781B3C007B41BE /* GGKeychain.m */,
+				005246C01D7D0D18009362A6 /* UIButton+HFAdd.h */,
+				005246C11D7D0D18009362A6 /* UIButton+HFAdd.m */,
 				00BD051A1D658D43003509E3 /* xxViews */,
 				00BD05191D658D33003509E3 /* xxMannger */,
 				00BD05171D658D20003509E3 /* xxControllers */,
@@ -814,6 +825,10 @@
 				00A715671D6EE9BB00F335C6 /* HFAttchment.m */,
 				00A715691D6EEED600F335C6 /* HFAttachmentDecoder.h */,
 				00A7156A1D6EEED600F335C6 /* HFAttachmentDecoder.m */,
+				005246C31D7D11A7009362A6 /* HFIMUserInfo.h */,
+				005246C41D7D11A7009362A6 /* HFIMUserInfo.m */,
+				005246C61D7D2DBC009362A6 /* HFExtensionHelper.h */,
+				005246C71D7D2DBC009362A6 /* HFExtensionHelper.m */,
 			);
 			name = xxMannger;
 			sourceTree = "<group>";
@@ -1767,6 +1782,7 @@
 				00E2537E1D649038000D138A /* NIMKit.m in Sources */,
 				00E253931D649038000D138A /* NIMInputEmoticonTabView.m in Sources */,
 				00E253751D649038000D138A /* NIMExtensionHelper.m in Sources */,
+				005246C51D7D11A7009362A6 /* HFIMUserInfo.m in Sources */,
 				00BE39A11D75826F00406D5E /* HFMessageModel.m in Sources */,
 				00E253D71D649038000D138A /* NIMImageCache.m in Sources */,
 				00CA19EF1D7539710076B3B6 /* CJInputControl.m in Sources */,
@@ -1812,6 +1828,7 @@
 				00E253B21D649038000D138A /* NIMSessionImageContentView.m in Sources */,
 				00E253B61D649038000D138A /* NIMSessionNotificationContentView.m in Sources */,
 				00E253DA1D649038000D138A /* NIMWebImageDownloader.m in Sources */,
+				005246C21D7D0D18009362A6 /* UIButton+HFAdd.m in Sources */,
 				00E253AA1D649038000D138A /* NIMSessionMsgDatasource.m in Sources */,
 				00E2538D1D649038000D138A /* NIMContactSelectViewController.m in Sources */,
 				00BE39A31D7582B200406D5E /* HFMessageConfig.m in Sources */,
@@ -1849,6 +1866,7 @@
 				00E253A11D649038000D138A /* NIMLocationContentConfig.m in Sources */,
 				00E253AB1D649038000D138A /* NIMSessionViewController.m in Sources */,
 				00E253CE1D649038000D138A /* NIMKitDevice.m in Sources */,
+				005246C81D7D2DBC009362A6 /* HFExtensionHelper.m in Sources */,
 				00E253D41D649038000D138A /* NIMAttributedLabelAttachment.m in Sources */,
 				00E253E21D649038000D138A /* NIMIndefiniteAnimatedView.m in Sources */,
 				00E253C41D649038000D138A /* NIMNormalTeamCardViewController.m in Sources */,

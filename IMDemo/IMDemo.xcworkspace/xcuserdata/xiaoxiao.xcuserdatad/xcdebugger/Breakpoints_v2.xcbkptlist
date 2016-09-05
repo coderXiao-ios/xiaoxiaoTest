@@ -19,13 +19,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "IMDemo/XXChatRoomVC.m"
-            timestampString = "494499634.320063"
+            filePath = "IMDemo/ViewController.m"
+            timestampString = "494747885.918848"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "307"
-            endingLineNumber = "307"
-            landmarkName = "-tapTipAction"
+            startingLineNumber = "85"
+            endingLineNumber = "85"
+            landmarkName = "-entyAction"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

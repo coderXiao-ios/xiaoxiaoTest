@@ -17,10 +17,8 @@
         NSDictionary *dict = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
         if ([dict isKindOfClass:[NSDictionary class]]) {
             HFAttchment *myAttachment = [[HFAttchment alloc] init];
-            myAttachment.level = dict[@"level"];
-            myAttachment.name = dict[@"name"];
+            myAttachment.userInfo = dict[@"userInfo"];
             myAttachment.type = dict[@"type"];
-            myAttachment.avator = dict[@"avator"];
             myAttachment.giftInfo = dict[@"giftInfo"];
             myAttachment.gcount = dict[@"gcount"];
             attachment = myAttachment ;

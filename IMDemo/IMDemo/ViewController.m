@@ -17,6 +17,7 @@
 #import "RegexKitLite.h"
 #import "HFChatRoomMannager.h"
 #import "GGKeychain.h"
+#import "HFExtensionHelper.h"
 #define APPID [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
 #define RGB(r,g,b,a)	[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
@@ -61,20 +62,26 @@
     NSString *uuid = [[NSUserDefaults standardUserDefaults] objectForKey:@"HFUUID"] ;
     NSLog(@"uuid:%@ 长度：%ld",uuid,(unsigned long)uuid.length);
     [self btntest];
+    NSDictionary *dic = @{@"level":@"100"};
+    NSLog(@"%@",[dic IMkit_jsonString]);
+    
+//    NSString *testJson = @""
 }
 - (void) entyAction{
     [[NIMSDK sharedSDK].loginManager login:NIMMyAccount2 token:NIMMyToken2 completion:^(NSError * _Nullable error) {
         if (error == nil) {
             NSLog(@"登录成功！") ;
+            NSDictionary *dic = @{@"level":@"100"};
             NIMChatroomEnterRequest *request = [[NIMChatroomEnterRequest alloc] init];
             request.roomId = @"3953686" ;
 //            request.roomId = @"3870254" ;
 //            request.roomNickname = @"hefanchatroom" ;
             request.roomAvatar = @"" ;
-            request.roomExt = @"10" ;
+            request.roomExt = [dic IMkit_jsonString] ;
             request.roomNotifyExt = [NSString stringWithFormat:@"%@来了~",NIMMyAccount2] ;
             [[NIMSDK sharedSDK].chatroomManager enterChatroom:request completion:^(NSError * _Nullable error, NIMChatroom * _Nullable chatroom, NIMChatroomMember * _Nullable me) {
                 if (error == nil) {
+                    NSLog(@"%@",[me.roomExt IMkit_jsonDict]);
                     [[HFChatRoomMannager sharedInstance] cacheMyInfo:me roomId:chatroom.roomId];
                     NSLog(@"ext:%@\nannouncement:%@",chatroom.ext,chatroom.announcement);
                     XXChatRoomVC *vc = [[XXChatRoomVC alloc] initWithChatroom:chatroom];
@@ -95,7 +102,7 @@
 }
 #pragma mark btn
 - (void) btntest{
-    NSString *str = @"400000条新留言" ;
+    NSString *str = @"40000000条新留言" ;
     UIImage *img = [UIImage imageNamed:@"icon_genduoliuyan_normal"];
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     [btn setImage:img forState:UIControlStateNormal];
@@ -103,12 +110,19 @@
     btn.titleLabel.font = [UIFont systemFontOfSize:13] ;
     NSDictionary *attrs = @{NSFontAttributeName : [UIFont systemFontOfSize:13]};
     CGSize textSize = [str boundingRectWithSize:self.view.frame.size options:NSStringDrawingUsesLineFragmentOrigin attributes:attrs context:nil].size;
-    btn.frame = CGRectMake(100, 400, textSize.width + img.size.width + 15, 20);
+    btn.frame = CGRectMake(100, 400, textSize.width + img.size.width + 10, 20);
     [self.view addSubview:btn];
     btn.backgroundColor = [UIColor lightGrayColor];
     btn.alpha = 0.3 ;
-    btn.titleEdgeInsets = UIEdgeInsetsMake(0, -img.size.width - 10, 0, 0);
-    btn.imageEdgeInsets = UIEdgeInsetsMake(0, 0, 0, -textSize.width - 10 - img.size.width - 60);
+    btn.titleLabel.backgroundColor = btn.backgroundColor;
+    btn.imageView.backgroundColor = btn.backgroundColor;
+    //在使用一次titleLabel和imageView后才能正确获取titleSize
+    CGSize titleSize = btn.titleLabel.bounds.size;
+    CGSize imageSize = btn.imageView.bounds.size;
+    CGFloat interval = 1.0;
+    
+    btn.imageEdgeInsets = UIEdgeInsetsMake(0,titleSize.width + interval, 0, -(titleSize.width + interval));
+    btn.titleEdgeInsets = UIEdgeInsetsMake(0, -(imageSize.width + interval), 0, imageSize.width + interval);
 }
 #pragma mark 生成UUID
 - (void)keep_UUID

@@ -10,10 +10,8 @@
 @implementation HFAttchment
 @synthesize giftInfo = _giftInfo;
 @synthesize type = _type;
-@synthesize name = _name;
 @synthesize content = _content;
-@synthesize level = _level;
-@synthesize avator = _avator;
+
 @synthesize gcount = _gcount;
 
 - (instancetype) init{
@@ -23,7 +21,7 @@
     return self ;
 }
 - (NSString *)encodeAttachment{
-    NSDictionary *dict =@{@"level":self.level,@"name":self.name,@"type":self.type,@"content":self.content,@"gcount":self.gcount,@"giftInfo":self.giftInfo};
+    NSDictionary *dict =@{@"userInfo":self.userInfo,@"type":self.type,@"content":self.content,@"gcount":self.gcount,@"giftInfo":self.giftInfo};
     NSData *data = [NSJSONSerialization dataWithJSONObject:dict options:0 error:nil];
     NSString *encodeString = @"";
     if (data) {

@@ -54,10 +54,10 @@ XXSingletonM
 - (void)sendCustomMessage:(NSDictionary *)attachmentDic  withRoomId:(NSString *)roomId{
 //    //构造自定义内容
     HFAttchment *attachment = [[HFAttchment alloc] init];
-    attachment.name = attachmentDic[HFAttachmentName];
-    attachment.level = attachmentDic[HFAttachmentLevel];
+    attachment.userInfo.name = attachmentDic[HFAttachmentName];
+    attachment.userInfo.level = attachmentDic[HFAttachmentLevel];
     attachment.type = attachmentDic[HFAttachmentType];
-    attachment.avator = attachmentDic[HFAttachmentAvator];
+    attachment.userInfo.avator = attachmentDic[HFAttachmentAvator];
     attachment.content = attachmentDic[HFAttachmentConetent];
     attachment.gcount = attachmentDic[HFAttachmentGcount];
     attachment.giftInfo = attachmentDic[HFAttachmentGiftInfo];

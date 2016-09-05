@@ -15,6 +15,7 @@
 #import "CustomMessageView.h"
 #import "HFAttchment.h"
 #import "HFMessageConfig.h"
+#import "UIButton+HFAdd.h"
 #define NIMMyAccount1   @"test3"
 #define BaseURL @"http://192.168.1.11:8080/web/chat/setMemberRole"
 #define HFAttachmentLevel @"level"
@@ -300,7 +301,9 @@ _customeView.transform = CGAffineTransformMakeTranslation( 0, -200);
 }
 - (void) setUpTipMessageShowOrHidden:(BOOL)isShown withText:(NSString *)text{
     [_m_newMsgTipBtn setHidden:isShown];
-    [_m_newMsgTipBtn setTitle:text forState:UIControlStateNormal];
+//    [_m_newMsgTipBtn setTitle:text forState:UIControlStateNormal];
+    [_m_newMsgTipBtn customselfTitle:text withImg:@"icon_genduoliuyan_normal" andMaxSize:CGSizeMake(self.view.frame.size.width, 100)];
+
 }
 - (void)tapTipAction{
     NSLog(@"点击消息提示label");

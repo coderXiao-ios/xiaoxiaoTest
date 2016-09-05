@@ -8,13 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <NIMSDK.h>
+#import "HFIMUserInfo.h"
 @interface HFAttchment : NSObject<NIMCustomAttachment>
-@property (nonatomic,copy) NSString *level;//等级
-@property (nonatomic,copy) NSString *name;//名字
+@property(nonatomic, strong)HFIMUserInfo *userInfo;
 @property (nonatomic,copy) NSString *type;//消息类型100：弹幕、101：分享、102：关注、103：泡泡、104：送礼物、105：超级礼物、106：高级用户入场、107：等级提升
 @property (nonatomic,copy) NSString *content;//消息主体
 @property (nonatomic,copy) NSString *gcount;//礼物个数
 @property (nonatomic,copy) NSString *giftInfo;//礼物类型
-@property (nonatomic,copy) NSString *avator;//用户头像
+
 
 @end

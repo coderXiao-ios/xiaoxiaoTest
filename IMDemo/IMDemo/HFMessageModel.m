@@ -109,35 +109,35 @@
         switch ([attachment.type integerValue]) {
             case 100:
                 self.messageDisplayMode = HFBarrage ;
-                self.contentText = [NSString stringWithFormat:@"%@发送了弹幕(弹幕内容：%@)",attachment.name,attachment.content];
+                self.contentText = [NSString stringWithFormat:@"%@发送了弹幕(弹幕内容：%@)",attachment.userInfo.name,attachment.content];
                 break;
             case 101:
                 self.messageDisplayMode = HFUserShare ;
-                self.contentText = [NSString stringWithFormat:@"%@分享了主播，分享才够味!\t\n主播心里特别美！\t\n主播就要上热门啦！\t\n分享才是真的爱！\t\n捧红主播的节奏\t\n宝宝受宠若惊",attachment.name];
+                self.contentText = [NSString stringWithFormat:@"%@分享了主播，分享才够味!\t\n主播心里特别美！\t\n主播就要上热门啦！\t\n分享才是真的爱！\t\n捧红主播的节奏\t\n宝宝受宠若惊",attachment.userInfo.name];
                 break;
             case 102:
                 self.messageDisplayMode = HFAttentionAnchor ;
-                self.contentText = [NSString stringWithFormat:@"%@关注了主播",attachment.name];
+                self.contentText = [NSString stringWithFormat:@"%@关注了主播",attachment.userInfo.name];
                 break;
             case 103:
                 self.messageDisplayMode = HFClickScreen ;
-                self.contentText = [NSString stringWithFormat:@"%@点击了泡泡",attachment.name];
+                self.contentText = [NSString stringWithFormat:@"%@点击了泡泡",attachment.userInfo.name];
                 break;
             case 104:
                 self.messageDisplayMode = HFSendPresent ;
-                self.contentText = [NSString stringWithFormat:@"直播消息：%@：我送了1个……礼物",attachment.name];
+                self.contentText = [NSString stringWithFormat:@"直播消息：%@：我送了1个……礼物",attachment.userInfo.name];
                 break;
             case 105:
                 self.messageDisplayMode = HFSendPresent ;
-                self.contentText = [NSString stringWithFormat:@"%@送超级礼物了",attachment.name];
+                self.contentText = [NSString stringWithFormat:@"%@送超级礼物了",attachment.userInfo.name];
                 break;
             case 106:
                 self.messageDisplayMode = HFSendPresent ;
-                self.contentText = [NSString stringWithFormat:@"直播消息：一声巨响华丽登场，%@进入直播间",attachment.name];
+                self.contentText = [NSString stringWithFormat:@"直播消息：一声巨响华丽登场，%@进入直播间",attachment.userInfo.name];
                 break;
             case 107:
                 self.messageDisplayMode = HFSendPresent ;
-                self.contentText = [NSString stringWithFormat:@"%@已升级至%@级，送礼物升级更快喲",attachment.name,attachment.level];
+                self.contentText = [NSString stringWithFormat:@"%@已升级至%@级，送礼物升级更快喲",attachment.userInfo.name,attachment.userInfo.level];
                 break;
             default:
                 break;
