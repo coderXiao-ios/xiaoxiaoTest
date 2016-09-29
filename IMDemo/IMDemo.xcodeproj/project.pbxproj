@@ -12,12 +12,16 @@
 		005246C21D7D0D18009362A6 /* UIButton+HFAdd.m in Sources */ = {isa = PBXBuildFile; fileRef = 005246C11D7D0D18009362A6 /* UIButton+HFAdd.m */; };
 		005246C51D7D11A7009362A6 /* HFIMUserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 005246C41D7D11A7009362A6 /* HFIMUserInfo.m */; };
 		005246C81D7D2DBC009362A6 /* HFExtensionHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 005246C71D7D2DBC009362A6 /* HFExtensionHelper.m */; };
+		00723F021D9D1786002247BE /* HFLinkTextStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 00723F011D9D1786002247BE /* HFLinkTextStorage.m */; };
+		00723F051D9D17B6002247BE /* HFTextConttainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 00723F041D9D17B6002247BE /* HFTextConttainer.m */; };
+		00723F091D9D1CAE002247BE /* TYTextContainer+Extended.m in Sources */ = {isa = PBXBuildFile; fileRef = 00723F081D9D1CAE002247BE /* TYTextContainer+Extended.m */; };
 		00A715641D6EA03E00F335C6 /* Star 1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A715621D6EA03E00F335C6 /* Star 1@2x.png */; };
 		00A715651D6EA03E00F335C6 /* Star 1@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00A715631D6EA03E00F335C6 /* Star 1@3x.png */; };
 		00A715681D6EE9BB00F335C6 /* HFAttchment.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A715671D6EE9BB00F335C6 /* HFAttchment.m */; };
 		00A7156B1D6EEED600F335C6 /* HFAttachmentDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A7156A1D6EEED600F335C6 /* HFAttachmentDecoder.m */; };
 		00A715711D6F01A500F335C6 /* CustomMessageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A715701D6F01A500F335C6 /* CustomMessageView.m */; };
 		00A715731D6F01CC00F335C6 /* CustomMessageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 00A715721D6F01CC00F335C6 /* CustomMessageView.xib */; };
+		00A86AB01D9BE4C2006199EE /* PopVcViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A86AAF1D9BE4C2006199EE /* PopVcViewController.m */; };
 		00A9D9F91D63093000CF9B95 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9D9F81D63093000CF9B95 /* main.m */; };
 		00A9D9FC1D63093100CF9B95 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9D9FB1D63093100CF9B95 /* AppDelegate.m */; };
 		00A9D9FF1D63093100CF9B95 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 00A9D9FE1D63093100CF9B95 /* ViewController.m */; };
@@ -32,6 +36,9 @@
 		00BD05351D65944F003509E3 /* NSString+NTES.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BD05341D65944F003509E3 /* NSString+NTES.m */; };
 		00BE39A11D75826F00406D5E /* HFMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE39A01D75826F00406D5E /* HFMessageModel.m */; };
 		00BE39A31D7582B200406D5E /* HFMessageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BE39A21D7582B200406D5E /* HFMessageConfig.m */; };
+		00BFA7891D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BFA7881D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.m */; };
+		00BFA7921D8154490006FF44 /* RandView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BFA7911D8154490006FF44 /* RandView.m */; };
+		00BFA7951D81552C0006FF44 /* UIColor+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 00BFA7941D81552C0006FF44 /* UIColor+Category.m */; };
 		00C1FBDF1D7977BE009BBEE9 /* MessageTipView.m in Sources */ = {isa = PBXBuildFile; fileRef = 00C1FBDE1D7977BE009BBEE9 /* MessageTipView.m */; };
 		00CA19161D744DD10076B3B6 /* keyboard_a.txt in Resources */ = {isa = PBXBuildFile; fileRef = 00CA18E71D744DD10076B3B6 /* keyboard_a.txt */; };
 		00CA19171D744DD10076B3B6 /* keyboard_a_00@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 00CA18E81D744DD10076B3B6 /* keyboard_a_00@2x.png */; };
@@ -114,6 +121,12 @@
 		00D00F5D1D6DA510003787C1 /* RegexKitLite.m in Sources */ = {isa = PBXBuildFile; fileRef = 00D00F5C1D6DA510003787C1 /* RegexKitLite.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		00D00F5F1D6DA5CB003787C1 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D00F5E1D6DA5CB003787C1 /* libicucore.tbd */; };
 		00DC213A1D781B3C007B41BE /* GGKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC21391D781B3C007B41BE /* GGKeychain.m */; };
+		00E09E9F1D9CC94900A2A1CD /* HFChatLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09E9E1D9CC94900A2A1CD /* HFChatLabel.m */; };
+		00E09EA51D9CE94F00A2A1CD /* NSAttributedString+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EA41D9CE94F00A2A1CD /* NSAttributedString+HF.m */; };
+		00E09EA81D9CEA4D00A2A1CD /* HFDrawStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EA71D9CEA4D00A2A1CD /* HFDrawStorge.m */; };
+		00E09EAB1D9CEAB800A2A1CD /* HFImageStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EAA1D9CEAB800A2A1CD /* HFImageStorge.m */; };
+		00E09EAF1D9CEB2800A2A1CD /* HFViewStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EAE1D9CEB2800A2A1CD /* HFViewStorge.m */; };
+		00E09EB21D9CF2E700A2A1CD /* HFTextStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EB11D9CF2E700A2A1CD /* HFTextStorge.m */; };
 		00E24C901D6320FC000D138A /* libstdc++.6.0.9.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E24C8F1D6320FC000D138A /* libstdc++.6.0.9.tbd */; };
 		00E24C921D63210F000D138A /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E24C911D63210F000D138A /* libz.tbd */; };
 		00E24C941D63211C000D138A /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00E24C931D63211C000D138A /* libsqlite3.0.tbd */; };
@@ -273,6 +286,12 @@
 		005246C41D7D11A7009362A6 /* HFIMUserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFIMUserInfo.m; sourceTree = "<group>"; };
 		005246C61D7D2DBC009362A6 /* HFExtensionHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFExtensionHelper.h; sourceTree = "<group>"; };
 		005246C71D7D2DBC009362A6 /* HFExtensionHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFExtensionHelper.m; sourceTree = "<group>"; };
+		00723F001D9D1786002247BE /* HFLinkTextStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFLinkTextStorage.h; sourceTree = "<group>"; };
+		00723F011D9D1786002247BE /* HFLinkTextStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFLinkTextStorage.m; sourceTree = "<group>"; };
+		00723F031D9D17B6002247BE /* HFTextConttainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTextConttainer.h; sourceTree = "<group>"; };
+		00723F041D9D17B6002247BE /* HFTextConttainer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFTextConttainer.m; sourceTree = "<group>"; };
+		00723F081D9D1CAE002247BE /* TYTextContainer+Extended.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "TYTextContainer+Extended.m"; sourceTree = "<group>"; };
+		00723F0A1D9D1EFE002247BE /* TYTextStorageProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TYTextStorageProtocol.h; sourceTree = "<group>"; };
 		00A715621D6EA03E00F335C6 /* Star 1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star 1@2x.png"; path = "../../../Desktop/法拉利资料/Star 1@2x.png"; sourceTree = "<group>"; };
 		00A715631D6EA03E00F335C6 /* Star 1@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Star 1@3x.png"; path = "../../../Desktop/法拉利资料/Star 1@3x.png"; sourceTree = "<group>"; };
 		00A715661D6EE9BB00F335C6 /* HFAttchment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFAttchment.h; sourceTree = "<group>"; };
@@ -282,6 +301,8 @@
 		00A7156F1D6F01A500F335C6 /* CustomMessageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomMessageView.h; sourceTree = "<group>"; };
 		00A715701D6F01A500F335C6 /* CustomMessageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomMessageView.m; sourceTree = "<group>"; };
 		00A715721D6F01CC00F335C6 /* CustomMessageView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomMessageView.xib; sourceTree = "<group>"; };
+		00A86AAE1D9BE4C2006199EE /* PopVcViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PopVcViewController.h; sourceTree = "<group>"; };
+		00A86AAF1D9BE4C2006199EE /* PopVcViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PopVcViewController.m; sourceTree = "<group>"; };
 		00A9D9F41D63093000CF9B95 /* IMDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IMDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		00A9D9F81D63093000CF9B95 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		00A9D9FA1D63093000CF9B95 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -309,6 +330,12 @@
 		00BE399F1D75826F00406D5E /* HFMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFMessageModel.h; sourceTree = "<group>"; };
 		00BE39A01D75826F00406D5E /* HFMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFMessageModel.m; sourceTree = "<group>"; };
 		00BE39A21D7582B200406D5E /* HFMessageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFMessageConfig.m; sourceTree = "<group>"; };
+		00BFA7871D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+HFPullToRefresh.h"; sourceTree = "<group>"; };
+		00BFA7881D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+HFPullToRefresh.m"; sourceTree = "<group>"; };
+		00BFA7901D8154490006FF44 /* RandView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RandView.h; sourceTree = "<group>"; };
+		00BFA7911D8154490006FF44 /* RandView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RandView.m; sourceTree = "<group>"; };
+		00BFA7931D81552C0006FF44 /* UIColor+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Category.h"; sourceTree = "<group>"; };
+		00BFA7941D81552C0006FF44 /* UIColor+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Category.m"; sourceTree = "<group>"; };
 		00C1FBDD1D7977BE009BBEE9 /* MessageTipView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageTipView.h; sourceTree = "<group>"; };
 		00C1FBDE1D7977BE009BBEE9 /* MessageTipView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageTipView.m; sourceTree = "<group>"; };
 		00CA18E71D744DD10076B3B6 /* keyboard_a.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = keyboard_a.txt; sourceTree = "<group>"; };
@@ -406,6 +433,18 @@
 		00D00F5E1D6DA5CB003787C1 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
 		00DC21381D781B3C007B41BE /* GGKeychain.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GGKeychain.h; sourceTree = "<group>"; };
 		00DC21391D781B3C007B41BE /* GGKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGKeychain.m; sourceTree = "<group>"; };
+		00E09E9D1D9CC94900A2A1CD /* HFChatLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFChatLabel.h; path = ../HFChatLabel.h; sourceTree = "<group>"; };
+		00E09E9E1D9CC94900A2A1CD /* HFChatLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFChatLabel.m; path = ../HFChatLabel.m; sourceTree = "<group>"; };
+		00E09EA31D9CE94F00A2A1CD /* NSAttributedString+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+HF.h"; path = "../NSAttributedString+HF.h"; sourceTree = "<group>"; };
+		00E09EA41D9CE94F00A2A1CD /* NSAttributedString+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+HF.m"; path = "../NSAttributedString+HF.m"; sourceTree = "<group>"; };
+		00E09EA61D9CEA4D00A2A1CD /* HFDrawStorge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFDrawStorge.h; path = ../HFDrawStorge.h; sourceTree = "<group>"; };
+		00E09EA71D9CEA4D00A2A1CD /* HFDrawStorge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFDrawStorge.m; path = ../HFDrawStorge.m; sourceTree = "<group>"; };
+		00E09EA91D9CEAB800A2A1CD /* HFImageStorge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFImageStorge.h; path = ../HFImageStorge.h; sourceTree = "<group>"; };
+		00E09EAA1D9CEAB800A2A1CD /* HFImageStorge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFImageStorge.m; path = ../HFImageStorge.m; sourceTree = "<group>"; };
+		00E09EAD1D9CEB2800A2A1CD /* HFViewStorge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFViewStorge.h; sourceTree = "<group>"; };
+		00E09EAE1D9CEB2800A2A1CD /* HFViewStorge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFViewStorge.m; sourceTree = "<group>"; };
+		00E09EB01D9CF2E700A2A1CD /* HFTextStorge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFTextStorge.h; sourceTree = "<group>"; };
+		00E09EB11D9CF2E700A2A1CD /* HFTextStorge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFTextStorge.m; sourceTree = "<group>"; };
 		00E24C8F1D6320FC000D138A /* libstdc++.6.0.9.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.6.0.9.tbd"; path = "usr/lib/libstdc++.6.0.9.tbd"; sourceTree = SDKROOT; };
 		00E24C911D63210F000D138A /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		00E24C931D63211C000D138A /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
@@ -705,6 +744,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		00A069EF1D99037A0017348D /* HFChatLabel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HFChatLabel;
+			sourceTree = "<group>";
+		};
 		00A9D9EB1D63093000CF9B95 = {
 			isa = PBXGroup;
 			children = (
@@ -730,6 +776,7 @@
 		00A9D9F61D63093000CF9B95 /* IMDemo */ = {
 			isa = PBXGroup;
 			children = (
+				00A069EF1D99037A0017348D /* HFChatLabel */,
 				00CA18E61D744DD10076B3B6 /* keyboard_a */,
 				00E253E51D64909D000D138A /* NIMKitResouce.bundle */,
 				00E252641D649038000D138A /* NIMKit */,
@@ -737,6 +784,10 @@
 				00A9D9FB1D63093100CF9B95 /* AppDelegate.m */,
 				00A9D9FD1D63093100CF9B95 /* ViewController.h */,
 				00A9D9FE1D63093100CF9B95 /* ViewController.m */,
+				00A86AAE1D9BE4C2006199EE /* PopVcViewController.h */,
+				00A86AAF1D9BE4C2006199EE /* PopVcViewController.m */,
+				00BFA7931D81552C0006FF44 /* UIColor+Category.h */,
+				00BFA7941D81552C0006FF44 /* UIColor+Category.m */,
 				00E2524D1D646ED9000D138A /* DataProvider.h */,
 				00E2524E1D646ED9000D138A /* DataProvider.m */,
 				00BD05161D658D0B003509E3 /* xxChatRoom */,
@@ -780,6 +831,7 @@
 		00BD05161D658D0B003509E3 /* xxChatRoom */ = {
 			isa = PBXGroup;
 			children = (
+				00E09EAC1D9CEADC00A2A1CD /* HFChatTabelLabel */,
 				00CA19EA1D7539710076B3B6 /* FHplaceHolderTextview */,
 				00CA19481D7538FD0076B3B6 /* ZYKeyBoardView */,
 				00D00F5B1D6DA510003787C1 /* RegexKitLite.h */,
@@ -814,6 +866,8 @@
 		00BD05191D658D33003509E3 /* xxMannger */ = {
 			isa = PBXGroup;
 			children = (
+				00BFA7901D8154490006FF44 /* RandView.h */,
+				00BFA7911D8154490006FF44 /* RandView.m */,
 				00BE399F1D75826F00406D5E /* HFMessageModel.h */,
 				00BE39A01D75826F00406D5E /* HFMessageModel.m */,
 				002036621D6BE82500E36288 /* xx_ConfigHeader.h */,
@@ -829,6 +883,8 @@
 				005246C41D7D11A7009362A6 /* HFIMUserInfo.m */,
 				005246C61D7D2DBC009362A6 /* HFExtensionHelper.h */,
 				005246C71D7D2DBC009362A6 /* HFExtensionHelper.m */,
+				00BFA7871D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.h */,
+				00BFA7881D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.m */,
 			);
 			name = xxMannger;
 			sourceTree = "<group>";
@@ -958,6 +1014,31 @@
 				00CA19EE1D7539710076B3B6 /* CJPlaceHolderTextView.m */,
 			);
 			path = FHplaceHolderTextview;
+			sourceTree = "<group>";
+		};
+		00E09EAC1D9CEADC00A2A1CD /* HFChatTabelLabel */ = {
+			isa = PBXGroup;
+			children = (
+				00E09E9D1D9CC94900A2A1CD /* HFChatLabel.h */,
+				00E09E9E1D9CC94900A2A1CD /* HFChatLabel.m */,
+				00E09EA31D9CE94F00A2A1CD /* NSAttributedString+HF.h */,
+				00E09EA41D9CE94F00A2A1CD /* NSAttributedString+HF.m */,
+				00E09EA61D9CEA4D00A2A1CD /* HFDrawStorge.h */,
+				00E09EA71D9CEA4D00A2A1CD /* HFDrawStorge.m */,
+				00E09EA91D9CEAB800A2A1CD /* HFImageStorge.h */,
+				00E09EAA1D9CEAB800A2A1CD /* HFImageStorge.m */,
+				00E09EAD1D9CEB2800A2A1CD /* HFViewStorge.h */,
+				00E09EAE1D9CEB2800A2A1CD /* HFViewStorge.m */,
+				00E09EB01D9CF2E700A2A1CD /* HFTextStorge.h */,
+				00E09EB11D9CF2E700A2A1CD /* HFTextStorge.m */,
+				00723F001D9D1786002247BE /* HFLinkTextStorage.h */,
+				00723F011D9D1786002247BE /* HFLinkTextStorage.m */,
+				00723F031D9D17B6002247BE /* HFTextConttainer.h */,
+				00723F041D9D17B6002247BE /* HFTextConttainer.m */,
+				00723F081D9D1CAE002247BE /* TYTextContainer+Extended.m */,
+				00723F0A1D9D1EFE002247BE /* TYTextStorageProtocol.h */,
+			);
+			path = HFChatTabelLabel;
 			sourceTree = "<group>";
 		};
 		00E252641D649038000D138A /* NIMKit */ = {
@@ -1756,6 +1837,7 @@
 				00E2539F1D649038000D138A /* NIMFileContentConfig.m in Sources */,
 				00BD05231D658E54003509E3 /* XXChatRoomListCell.m in Sources */,
 				00E2524F1D646ED9000D138A /* DataProvider.m in Sources */,
+				00723F091D9D1CAE002247BE /* TYTextContainer+Extended.m in Sources */,
 				00E253BC1D649038000D138A /* NIMSessionListCell.m in Sources */,
 				00E253D91D649038000D138A /* NIMWebImageDecoder.m in Sources */,
 				00E253941D649038000D138A /* NIMInputMoreContainerView.m in Sources */,
@@ -1769,8 +1851,10 @@
 				00CA19A51D7538FD0076B3B6 /* FloatKeyBoardView.m in Sources */,
 				00E253A81D649038000D138A /* NIMMessageCellMaker.m in Sources */,
 				00E253A31D649038000D138A /* NIMTextContentConfig.m in Sources */,
+				00A86AB01D9BE4C2006199EE /* PopVcViewController.m in Sources */,
 				00E2538E1D649038000D138A /* NIMInputAudioRecordIndicatorView.m in Sources */,
 				00E253CC1D649038000D138A /* NIMTeamSwitchTableViewCell.m in Sources */,
+				00E09EA51D9CE94F00A2A1CD /* NSAttributedString+HF.m in Sources */,
 				00E253E31D649038000D138A /* NIMProgressHUD.m in Sources */,
 				00E253C11D649038000D138A /* NIMUsrInfoData.m in Sources */,
 				00E253AC1D649038000D138A /* NIMSessionViewLayoutManager.m in Sources */,
@@ -1783,8 +1867,10 @@
 				00E253931D649038000D138A /* NIMInputEmoticonTabView.m in Sources */,
 				00E253751D649038000D138A /* NIMExtensionHelper.m in Sources */,
 				005246C51D7D11A7009362A6 /* HFIMUserInfo.m in Sources */,
+				00E09E9F1D9CC94900A2A1CD /* HFChatLabel.m in Sources */,
 				00BE39A11D75826F00406D5E /* HFMessageModel.m in Sources */,
 				00E253D71D649038000D138A /* NIMImageCache.m in Sources */,
+				00BFA7951D81552C0006FF44 /* UIColor+Category.m in Sources */,
 				00CA19EF1D7539710076B3B6 /* CJInputControl.m in Sources */,
 				00E253951D649038000D138A /* NIMInputTextView.m in Sources */,
 				002035B11D6B996100E36288 /* HFChatTableView.m in Sources */,
@@ -1820,6 +1906,8 @@
 				00E253D11D649038000D138A /* NIMPinyinConverter.m in Sources */,
 				00E253AD1D649038000D138A /* NIMTimestampModel.m in Sources */,
 				00E253C21D649038000D138A /* NIMAdvancedTeamCardViewController.m in Sources */,
+				00723F051D9D17B6002247BE /* HFTextConttainer.m in Sources */,
+				00E09EAF1D9CEB2800A2A1CD /* HFViewStorge.m in Sources */,
 				00E253841D649038000D138A /* NIMMemberGroupView.m in Sources */,
 				00E253B81D649038000D138A /* NIMSessionUnknowContentView.m in Sources */,
 				00E253A91D649038000D138A /* NIMMessageMaker.m in Sources */,
@@ -1833,6 +1921,7 @@
 				00E2538D1D649038000D138A /* NIMContactSelectViewController.m in Sources */,
 				00BE39A31D7582B200406D5E /* HFMessageConfig.m in Sources */,
 				00E253E11D649038000D138A /* UIView+NIMWebCacheOperation.m in Sources */,
+				00E09EB21D9CF2E700A2A1CD /* HFTextStorge.m in Sources */,
 				00E2537D1D649038000D138A /* NIMKitSwitcherCell.m in Sources */,
 				00E253911D649038000D138A /* NIMInputEmoticonManager.m in Sources */,
 				00E2538B1D649038000D138A /* NIMContactSelectConfig.m in Sources */,
@@ -1859,6 +1948,8 @@
 				00E253DC1D649038000D138A /* NIMWebImageManager.m in Sources */,
 				00E253E01D649038000D138A /* UIImage+NIMMultiFormat.m in Sources */,
 				00E253B51D649038000D138A /* NIMSessionNetChatNotifyContentView.m in Sources */,
+				00BFA7891D7FE0B40006FF44 /* UIScrollView+HFPullToRefresh.m in Sources */,
+				00723F021D9D1786002247BE /* HFLinkTextStorage.m in Sources */,
 				00E253991D649038000D138A /* NIMMediaItem.m in Sources */,
 				00E253851D649038000D138A /* NIMPageView.m in Sources */,
 				00E253971D649038000D138A /* NIMInputView.m in Sources */,
@@ -1869,6 +1960,7 @@
 				005246C81D7D2DBC009362A6 /* HFExtensionHelper.m in Sources */,
 				00E253D41D649038000D138A /* NIMAttributedLabelAttachment.m in Sources */,
 				00E253E21D649038000D138A /* NIMIndefiniteAnimatedView.m in Sources */,
+				00BFA7921D8154490006FF44 /* RandView.m in Sources */,
 				00E253C41D649038000D138A /* NIMNormalTeamCardViewController.m in Sources */,
 				00E253CD1D649038000D138A /* NIMTimePickerView.m in Sources */,
 				00E2539D1D649038000D138A /* NIMBaseSessionContentConfig.m in Sources */,
@@ -1879,8 +1971,10 @@
 				00E253C91D649038000D138A /* NIMTeamAnnouncementListCell.m in Sources */,
 				00D00F5D1D6DA510003787C1 /* RegexKitLite.m in Sources */,
 				00E2538C1D649038000D138A /* NIMContactSelectTabView.m in Sources */,
+				00E09EAB1D9CEAB800A2A1CD /* HFImageStorge.m in Sources */,
 				00C1FBDF1D7977BE009BBEE9 /* MessageTipView.m in Sources */,
 				00CA19A11D7538FD0076B3B6 /* ExpressionModel.m in Sources */,
+				00E09EA81D9CEA4D00A2A1CD /* HFDrawStorge.m in Sources */,
 				00E253C01D649038000D138A /* NIMTeamInfoData.m in Sources */,
 				00A715681D6EE9BB00F335C6 /* HFAttchment.m in Sources */,
 				00E253921D649038000D138A /* NIMInputEmoticonParser.m in Sources */,

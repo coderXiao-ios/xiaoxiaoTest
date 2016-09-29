@@ -139,7 +139,6 @@ XXSingletonH
 - (void)fetchChatroomMembersHF:(nullable NIMChatroomMemberRequest  *)request
                     completion:(nullable NIMChatroomMembersHandler)completion;
 
-
 /**
  *  根据用户ID获取聊天室成员信息
  *

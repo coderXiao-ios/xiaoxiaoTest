@@ -103,7 +103,7 @@ XXSingletonM
     [[NIMSDK sharedSDK].chatroomManager exitChatroom:roomId completion:completion];
 }
 //获取聊天室成员
-- (void)fetchChatroomMembers:(NIMChatroomMemberRequest *)request completion:(NIMChatroomMembersHandler)completion{
+- (void)fetchChatroomMembersHF:(NIMChatroomMemberRequest *)request completion:(NIMChatroomMembersHandler)completion{
     [[NIMSDK sharedSDK].chatroomManager fetchChatroomMembers:request completion:completion];
 }
 //获取聊天室信息

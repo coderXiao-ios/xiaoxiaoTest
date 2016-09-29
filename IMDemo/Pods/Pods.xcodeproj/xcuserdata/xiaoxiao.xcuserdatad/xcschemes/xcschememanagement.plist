@@ -14,6 +14,16 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FXLabel.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>HeapInspector.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>M80AttributedLabel.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,27 +72,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>05FB0AEC69B8FAD98F718BEBD9C812DD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>12E2BC28C62976C425F4B71C2723F0B1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5E0CB17D9FEBE16A217FFFC0CB58AD12</key>
+		<key>1323B76507BB3850FC2F600F4ED0A384</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65458A10D2A858668220C219E631ADB1</key>
+		<key>1CDAA5D84F0E642EDE2B98CFE58D363F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8C2745942004A80CC1FA8FDCA5369C52</key>
+		<key>88D0AF65A547A63E1976E72E5B9728EF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8A80374C6AC7880323D41CBAB245E601</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>8C4FF5379600898064671BAFFAFE77D5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,17 +107,22 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D1F34FC49D4B74D758FBBCB04373B6B0</key>
+		<key>D94A27F43EAF468FAFACFF3E2E85927C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>F043D8656BBE051522862297CF1D016D</key>
+		<key>E15B3929B27DD7BC1C9357F551616A61</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FDA54F539FF9F0713E813F07223CD0EC</key>
+		<key>E6D89211C95BEA91993C3A33D0DC3643</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>EFBEC38EBF817BE86A2EF4486B9CE2E7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

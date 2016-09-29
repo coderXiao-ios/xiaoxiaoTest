@@ -10,7 +10,6 @@
 #import <NIMSDK.h>
 #import "NIMKit.h"
 #import "TYAttributedLabel.h"
-//#import "SessionViewController.h"
 #import "XXChatRoomVC.h"
 #import "HFMessageModel.h"
 #import <M80AttributedLabel.h>
@@ -18,6 +17,8 @@
 #import "HFChatRoomMannager.h"
 #import "GGKeychain.h"
 #import "HFExtensionHelper.h"
+#import "RandView.h"
+#import "PopVcViewController.h"
 #define APPID [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleIdentifier"]
 #define RGB(r,g,b,a)	[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]
 
@@ -66,28 +67,25 @@
     NSLog(@"%@",[dic IMkit_jsonString]);
     
 //    NSString *testJson = @""
+    RandView *randvView = [[RandView alloc] initWithFrame:CGRectMake(10, 400, 30, 15) Rand:1] ;//[model.attachmentInfoDic[@"level"] intValue]
+    [self.view addSubview:randvView];
 }
 - (void) entyAction{
     [[NIMSDK sharedSDK].loginManager login:NIMMyAccount2 token:NIMMyToken2 completion:^(NSError * _Nullable error) {
         if (error == nil) {
             NSLog(@"登录成功！") ;
-            NSDictionary *dic = @{@"level":@"100"};
+            NSDictionary *dic = @{@"level":@"100",@"avator":@"asdgds"};
             NIMChatroomEnterRequest *request = [[NIMChatroomEnterRequest alloc] init];
             request.roomId = @"3953686" ;
-//            request.roomId = @"3870254" ;
-//            request.roomNickname = @"hefanchatroom" ;
             request.roomAvatar = @"" ;
-            request.roomExt = [dic IMkit_jsonString] ;
-            request.roomNotifyExt = [NSString stringWithFormat:@"%@来了~",NIMMyAccount2] ;
+            request.roomExt = @"000" ;
+            request.roomNotifyExt = [dic IMkit_jsonString] ;
             [[NIMSDK sharedSDK].chatroomManager enterChatroom:request completion:^(NSError * _Nullable error, NIMChatroom * _Nullable chatroom, NIMChatroomMember * _Nullable me) {
                 if (error == nil) {
                     NSLog(@"%@",[me.roomExt IMkit_jsonDict]);
                     [[HFChatRoomMannager sharedInstance] cacheMyInfo:me roomId:chatroom.roomId];
                     NSLog(@"ext:%@\nannouncement:%@",chatroom.ext,chatroom.announcement);
                     XXChatRoomVC *vc = [[XXChatRoomVC alloc] initWithChatroom:chatroom];
-//                    [self presentViewController:vc animated:YES completion:^{
-//                        
-//                    }];
                     [self.navigationController pushViewController:vc animated:YES];
                 }else{
                     NSLog(@"进入聊天室失败！");
@@ -149,6 +147,8 @@
 - (void)addTextAttributedLabel1
 {
     TYAttributedLabel *label1 = [[TYAttributedLabel alloc]initWithFrame:CGRectMake(0, 300, CGRectGetWidth(self.view.frame), 0)];
+    
+//    label1.shadowColor = [UIColor blackColor];
     label1.delegate = self;
     label1.highlightedLinkColor = [UIColor orangeColor];
     [self.view addSubview:label1];
@@ -181,10 +181,11 @@
 - (void)addTextAttributedLabel2
 {
     NSString *name = @"破蛹而出";
-    NSString *titleimg = @"user_rank_100" ;
+    NSString *titleimg = @"http://imgfan.b2social.cn/5cf3632d-338d-486b-ab19-7e5847e0ff5c.png" ;
  
-    NSString *textStr = [NSString stringWithFormat:@"[%@,20,20]总有一天你将%@，[ico_aini,25,25]成长得比人们期待的还要美丽。",titleimg,name];
-    
+    NSString *textStr = [NSString stringWithFormat:@"[%@,100,50]总有一天你将%@，[icon_jiangbei,25,25]成长得比人们期待的还要美丽。",titleimg,name];
+//    NSString *textStr = [NSString stringWithFormat:@"[%@,20,20]总有一天你将%@，[%@,25,25]成长得比人们期待的还要美丽。",titleimg,name,titleimg];
+
     TYAttributedLabel *label1 = [[TYAttributedLabel alloc]initWithFrame:CGRectMake(0, 300, CGRectGetWidth(self.view.frame), 0)];
     label1.delegate = self;
     label1.highlightedLinkColor = [UIColor redColor];
@@ -195,24 +196,19 @@
     TYTextContainer *attStringCreater = [[TYTextContainer alloc]init];
     attStringCreater.text = textStr;
     NSMutableArray *tmpArray = [NSMutableArray array];
-    [textStr enumerateStringsMatchedByRegex:@"\\[(\\w+?),(\\d+?),(\\d+?)\\]" usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
+    [textStr enumerateStringsMatchedByRegex:@"\\[(http(s)?://([\\w-]+\\.)+[\\w-]+(/[\\w- ./?%&=]*)?),(\\d+?),(\\d+?)\\]" usingBlock:^(NSInteger captureCount, NSString *const __unsafe_unretained *capturedStrings, const NSRange *capturedRanges, volatile BOOL *const stop) {
         NSLog(@"____%@ _____%@", *capturedStrings, NSStringFromRange(*capturedRanges));
         TYImageStorage *imageStorage = [[TYImageStorage alloc]init];
-        imageStorage.imageName = capturedStrings[1];
+        imageStorage.imageURL = [NSURL URLWithString:capturedStrings[1]];
         imageStorage.range = capturedRanges[0];
         imageStorage.size = CGSizeMake([capturedStrings[2]intValue], [capturedStrings[3]intValue]);
         
-        [tmpArray addObject:imageStorage];
+            [tmpArray addObject:imageStorage];
     }];
     // 添加图片信息数组到label
     [attStringCreater addTextStorageArray:tmpArray];
     [attStringCreater addLinkWithLinkData:name linkColor:nil underLineStyle:kCTUnderlineStyleNone range:[textStr rangeOfString:name]];
-    TYTextStorage *textStorage = [[TYTextStorage alloc]init];
-    textStorage.range = [textStr rangeOfString:@"[ico_aini,25,25]成长得比人们期待的还要美丽。"];
-    textStorage.textColor = RGB(213, 100, 0, 1);
-    textStorage.font = [UIFont systemFontOfSize:16];
-    [attStringCreater addTextStorage:textStorage];
-    attStringCreater.textColor = [UIColor yellowColor];
+    attStringCreater.textColor = RGB(213, 100, 0, 1);
     label1.textContainer = attStringCreater;
     [label1 sizeToFit];
 
@@ -227,5 +223,13 @@
         if (rene.location != NSNotFound) {
             NSLog(@"用户名片");
         }    }
+}
+- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
+    [self swipPop];
+}
+- (void) swipPop{
+    PopVcViewController *vc= [[PopVcViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:vc];
+    [self.navigationController pushViewController:nav animated:YES];
 }
 @end

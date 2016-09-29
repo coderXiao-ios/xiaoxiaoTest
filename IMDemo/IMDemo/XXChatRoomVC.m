@@ -53,7 +53,12 @@
     self = [super init];
     if (self) {
         _chatroom = chatroom;
-        
+        NIMChatroomMemberRequest *request = [[NIMChatroomMemberRequest alloc] init];
+        request.roomId = chatroom.roomId ;
+//        [[HFChatRoomMannager sharedInstance] fetchChatroomMembersHF:request completion:^(NSError * _Nullable error, NSArray<NIMChatroomMember *> * _Nullable members) {
+//            
+//        }];
+
     }
     return self;
 }
@@ -123,6 +128,16 @@
     [_m_newMsgTipBtn addTarget:self action:@selector(tapTipAction) forControlEvents:UIControlEventTouchUpInside];
     [_m_newMsgTipBtn setHidden:YES];
     [self.view addSubview:_m_newMsgTipBtn];
+    NIMChatroomMemberRequest *reques = [[NIMChatroomMemberRequest alloc] init];
+    reques.roomId = _chatroom.roomId ;
+    [[HFChatRoomMannager sharedInstance]  fetchChatroomMembersHF:reques completion:^(NSError * _Nullable error, NSArray<NIMChatroomMember *> * _Nullable members) {
+        if (error == nil) {
+            
+        }
+    }];
+    [[NIMSDK sharedSDK].chatroomManager fetchChatroomMembers:reques completion:^(NSError * _Nullable error, NSArray<NIMChatroomMember *> * _Nullable members) {
+        
+    }];
     
 }
 #pragma mark FloatKeyBoardViewDelegate
@@ -301,7 +316,6 @@ _customeView.transform = CGAffineTransformMakeTranslation( 0, -200);
 }
 - (void) setUpTipMessageShowOrHidden:(BOOL)isShown withText:(NSString *)text{
     [_m_newMsgTipBtn setHidden:isShown];
-//    [_m_newMsgTipBtn setTitle:text forState:UIControlStateNormal];
     [_m_newMsgTipBtn customselfTitle:text withImg:@"icon_genduoliuyan_normal" andMaxSize:CGSizeMake(self.view.frame.size.width, 100)];
 
 }
