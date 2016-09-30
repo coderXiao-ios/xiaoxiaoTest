@@ -122,7 +122,7 @@
 		00D00F5F1D6DA5CB003787C1 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 00D00F5E1D6DA5CB003787C1 /* libicucore.tbd */; };
 		00DC213A1D781B3C007B41BE /* GGKeychain.m in Sources */ = {isa = PBXBuildFile; fileRef = 00DC21391D781B3C007B41BE /* GGKeychain.m */; };
 		00E09E9F1D9CC94900A2A1CD /* HFChatLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09E9E1D9CC94900A2A1CD /* HFChatLabel.m */; };
-		00E09EA51D9CE94F00A2A1CD /* NSAttributedString+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EA41D9CE94F00A2A1CD /* NSAttributedString+HF.m */; };
+		00E09EA51D9CE94F00A2A1CD /* NSMutableAttributedString+HF.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EA41D9CE94F00A2A1CD /* NSMutableAttributedString+HF.m */; };
 		00E09EA81D9CEA4D00A2A1CD /* HFDrawStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EA71D9CEA4D00A2A1CD /* HFDrawStorge.m */; };
 		00E09EAB1D9CEAB800A2A1CD /* HFImageStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EAA1D9CEAB800A2A1CD /* HFImageStorge.m */; };
 		00E09EAF1D9CEB2800A2A1CD /* HFViewStorge.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E09EAE1D9CEB2800A2A1CD /* HFViewStorge.m */; };
@@ -254,6 +254,7 @@
 		00E253E31D649038000D138A /* NIMProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E2536E1D649038000D138A /* NIMProgressHUD.m */; };
 		00E253E41D649038000D138A /* UIView+NIMKitToast.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E253731D649038000D138A /* UIView+NIMKitToast.m */; };
 		00E253E61D64909D000D138A /* NIMKitResouce.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 00E253E51D64909D000D138A /* NIMKitResouce.bundle */; };
+		00FED3251D9E1C0400144C66 /* HFImageCahe.m in Sources */ = {isa = PBXBuildFile; fileRef = 00FED3241D9E1C0400144C66 /* HFImageCahe.m */; };
 		AC49A214CDBF73E4D61B1712 /* libPods-IMDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9662F72400AC245058659F44 /* libPods-IMDemo.a */; };
 /* End PBXBuildFile section */
 
@@ -435,8 +436,8 @@
 		00DC21391D781B3C007B41BE /* GGKeychain.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GGKeychain.m; sourceTree = "<group>"; };
 		00E09E9D1D9CC94900A2A1CD /* HFChatLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFChatLabel.h; path = ../HFChatLabel.h; sourceTree = "<group>"; };
 		00E09E9E1D9CC94900A2A1CD /* HFChatLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFChatLabel.m; path = ../HFChatLabel.m; sourceTree = "<group>"; };
-		00E09EA31D9CE94F00A2A1CD /* NSAttributedString+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSAttributedString+HF.h"; path = "../NSAttributedString+HF.h"; sourceTree = "<group>"; };
-		00E09EA41D9CE94F00A2A1CD /* NSAttributedString+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSAttributedString+HF.m"; path = "../NSAttributedString+HF.m"; sourceTree = "<group>"; };
+		00E09EA31D9CE94F00A2A1CD /* NSMutableAttributedString+HF.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSMutableAttributedString+HF.h"; path = "../NSMutableAttributedString+HF.h"; sourceTree = "<group>"; };
+		00E09EA41D9CE94F00A2A1CD /* NSMutableAttributedString+HF.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSMutableAttributedString+HF.m"; path = "../NSMutableAttributedString+HF.m"; sourceTree = "<group>"; };
 		00E09EA61D9CEA4D00A2A1CD /* HFDrawStorge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFDrawStorge.h; path = ../HFDrawStorge.h; sourceTree = "<group>"; };
 		00E09EA71D9CEA4D00A2A1CD /* HFDrawStorge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = HFDrawStorge.m; path = ../HFDrawStorge.m; sourceTree = "<group>"; };
 		00E09EA91D9CEAB800A2A1CD /* HFImageStorge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = HFImageStorge.h; path = ../HFImageStorge.h; sourceTree = "<group>"; };
@@ -700,6 +701,8 @@
 		00E253721D649038000D138A /* UIView+NIMKitToast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+NIMKitToast.h"; sourceTree = "<group>"; };
 		00E253731D649038000D138A /* UIView+NIMKitToast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+NIMKitToast.m"; sourceTree = "<group>"; };
 		00E253E51D64909D000D138A /* NIMKitResouce.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = NIMKitResouce.bundle; sourceTree = SOURCE_ROOT; };
+		00FED3231D9E1C0400144C66 /* HFImageCahe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFImageCahe.h; sourceTree = "<group>"; };
+		00FED3241D9E1C0400144C66 /* HFImageCahe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFImageCahe.m; sourceTree = "<group>"; };
 		657DECBEF1C3C413EFA83424 /* Pods-IMDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IMDemo/Pods-IMDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		66F84A7DFD62E2DC5FA1D056 /* Pods-IMDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IMDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-IMDemo/Pods-IMDemo.release.xcconfig"; sourceTree = "<group>"; };
 		9662F72400AC245058659F44 /* libPods-IMDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-IMDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1021,8 +1024,8 @@
 			children = (
 				00E09E9D1D9CC94900A2A1CD /* HFChatLabel.h */,
 				00E09E9E1D9CC94900A2A1CD /* HFChatLabel.m */,
-				00E09EA31D9CE94F00A2A1CD /* NSAttributedString+HF.h */,
-				00E09EA41D9CE94F00A2A1CD /* NSAttributedString+HF.m */,
+				00E09EA31D9CE94F00A2A1CD /* NSMutableAttributedString+HF.h */,
+				00E09EA41D9CE94F00A2A1CD /* NSMutableAttributedString+HF.m */,
 				00E09EA61D9CEA4D00A2A1CD /* HFDrawStorge.h */,
 				00E09EA71D9CEA4D00A2A1CD /* HFDrawStorge.m */,
 				00E09EA91D9CEAB800A2A1CD /* HFImageStorge.h */,
@@ -1037,6 +1040,8 @@
 				00723F041D9D17B6002247BE /* HFTextConttainer.m */,
 				00723F081D9D1CAE002247BE /* TYTextContainer+Extended.m */,
 				00723F0A1D9D1EFE002247BE /* TYTextStorageProtocol.h */,
+				00FED3231D9E1C0400144C66 /* HFImageCahe.h */,
+				00FED3241D9E1C0400144C66 /* HFImageCahe.m */,
 			);
 			path = HFChatTabelLabel;
 			sourceTree = "<group>";
@@ -1854,7 +1859,7 @@
 				00A86AB01D9BE4C2006199EE /* PopVcViewController.m in Sources */,
 				00E2538E1D649038000D138A /* NIMInputAudioRecordIndicatorView.m in Sources */,
 				00E253CC1D649038000D138A /* NIMTeamSwitchTableViewCell.m in Sources */,
-				00E09EA51D9CE94F00A2A1CD /* NSAttributedString+HF.m in Sources */,
+				00E09EA51D9CE94F00A2A1CD /* NSMutableAttributedString+HF.m in Sources */,
 				00E253E31D649038000D138A /* NIMProgressHUD.m in Sources */,
 				00E253C11D649038000D138A /* NIMUsrInfoData.m in Sources */,
 				00E253AC1D649038000D138A /* NIMSessionViewLayoutManager.m in Sources */,
@@ -1870,6 +1875,7 @@
 				00E09E9F1D9CC94900A2A1CD /* HFChatLabel.m in Sources */,
 				00BE39A11D75826F00406D5E /* HFMessageModel.m in Sources */,
 				00E253D71D649038000D138A /* NIMImageCache.m in Sources */,
+				00FED3251D9E1C0400144C66 /* HFImageCahe.m in Sources */,
 				00BFA7951D81552C0006FF44 /* UIColor+Category.m in Sources */,
 				00CA19EF1D7539710076B3B6 /* CJInputControl.m in Sources */,
 				00E253951D649038000D138A /* NIMInputTextView.m in Sources */,
